@@ -1,0 +1,7 @@
+{
+  "CurrencyLong": "Bitcoin",
+  "Currency": "BTC",
+  "TxFee": 8.0e-08,
+  "MinConfirmation": 5,
+  "IsActive": true
+}

@@ -1,0 +1,16 @@
+{
+  "MarketName": "LTC-ZEIT",
+  "High": 2.3E-7,
+  "Low": 2.0E-7,
+  "Volume": 1406611.43827056,
+  "Last": 2.0E-7,
+  "BaseVolume": 0.30179011,
+  "TimeStamp": "2014-06-26T05:22:57.673",
+  "Bid": 2.0E-7,
+  "Ask": 2.3E-7,
+  "OpenBuyOrders": 7,
+  "OpenSellOrders": 7,
+  "PrevDay": 2.2E-7,
+  "Created": "2014-03-01T21:00:00",
+  "DisplayMarketName": null
+}
