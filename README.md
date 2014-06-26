@@ -25,8 +25,16 @@ The gem uses a simple mapping of API resources to models, with a majority of the
     >> Quote.current('BTC-LTC')
     #=> #<Bittrex::Quote:0x000001015cd058 @market="BTC-LTC", @bid=0.015792, @ask=0.01602899, @last=0.015792, @raw={"Bid"=>0.015792, "Ask"=>0.01602899, "Last"=>0.015792}>
 
-## Example
+## Authentication
 
+You can authenticate access to your Bittrex account by configuring your implementation of the bittrex gem. This is accomplished by using a config block at the top of your application.
+
+Set up your keys at: https://bittrex.com/Account/ManageApiKey
+
+    Bittrex.config do |c|
+      c.key = 'my_api_key'
+      c.secret = 'my_api_secret'
+    end
 
 ## Contributing
 
