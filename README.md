@@ -15,6 +15,18 @@ And then execute:
 Or install it yourself as:
 
     $ gem install bittrex
+    
+## Usage
+
+The gem uses a simple mapping of API resources to models, with a majority of the attributes mapped to corresponding attributes on the corresponding class. There are some translations into a more "rubyish" verbage, but for the most part things are directly mapped.
+
+    require 'rubygems'
+    require 'bittrex'
+    >> Quote.current('BTC-LTC')
+    #=> #<Bittrex::Quote:0x000001015cd058 @market="BTC-LTC", @bid=0.015792, @ask=0.01602899, @last=0.015792, @raw={"Bid"=>0.015792, "Ask"=>0.01602899, "Last"=>0.015792}>
+
+## Example
+
 
 ## Contributing
 
