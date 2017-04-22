@@ -1,5 +1,6 @@
 require 'faraday'
 require 'base64'
+require 'json'
 
 module Bittrex
   class Client
