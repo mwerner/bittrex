@@ -17,6 +17,10 @@ module Bittrex
     def self.all
       client.get('public/getmarkets').map{|data| new(data) }
     end
+    
+    def self.history(market)
+      client.get('public/getmarkethistory',{market: market})
+    end
 
     private
 
