@@ -1,3 +1,5 @@
+require 'time'
+
 module Bittrex
   class Market
     attr_reader :name, :currency, :base, :currency_name, :base_name, :minimum_trade, :active, :created_at, :raw
