@@ -10,7 +10,7 @@ Dir[File.join(Bittrex.root, 'spec/support/**/*.rb')].each {|f| require f}
 
 RSpec.configure do |config|
   config.before(:each) do
-    Bittrex.stub(:client)
+    allow(Bittrex).to receive(:client)
   end
 end
 
@@ -20,5 +20,5 @@ def fixture(resource)
 end
 
 def should_assign_attribute(subject, method, value)
-  subject.send(method).should eq(value)
+  expect(subject.send(method)).to eq(value)
 end
