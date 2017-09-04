@@ -1,5 +1,5 @@
 module Bittrex
-  class Withdrawl
+  class Withdrawal
     attr_reader :id, :currency, :quantity, :address, :authorized,
                 :pending, :canceled, :invalid_address,
                 :transaction_cost, :transaction_id, :executed_at

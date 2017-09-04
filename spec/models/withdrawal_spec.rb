@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Bittrex::Withdrawl do
-  let(:data){ fixture(:withdrawl) }
-  let(:subject){ Bittrex::Withdrawl.new(data) }
+describe Bittrex::Withdrawal do
+  let(:data){ fixture(:withdrawal) }
+  let(:subject){ Bittrex::Withdrawal.new(data) }
 
   describe '#initialization' do
     it { should_assign_attribute(subject, :id, 'c7f7b806-36cf-4xxx-b198-fcdeb1220762') }
