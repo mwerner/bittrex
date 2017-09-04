@@ -29,7 +29,7 @@ The gem uses a simple mapping of API resources to models, with a majority of the
 
 You can authenticate access to your Bittrex account by configuring your implementation of the bittrex gem. This is accomplished by using a config block at the top of your application.
 
-Set up your keys at: https://bittrex.com/Account/ManageApiKey
+Set up your keys at: https://bittrex.com/Manage#sectionApi
 
     Bittrex.config do |c|
       c.key = 'my_api_key'
