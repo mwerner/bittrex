@@ -15,7 +15,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install bittrex
-    
+
 ## Usage
 
 The gem uses a simple mapping of API resources to models, with a majority of the attributes mapped to corresponding attributes on the corresponding class. There are some translations into a more "rubyish" verbage, but for the most part things are directly mapped.
@@ -35,6 +35,10 @@ Set up your keys at: https://bittrex.com/Account/ManageApiKey
       c.key = 'my_api_key'
       c.secret = 'my_api_secret'
     end
+
+## Development
+
+To test out method calls locally run `bundle exec rake bittrex:console`
 
 ## Contributing
 
