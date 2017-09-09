@@ -38,7 +38,11 @@ Set up your keys at: https://bittrex.com/Manage#sectionApi
 
 ## Development
 
-To test out method calls locally run `bundle exec rake bittrex:console`
+You can test out public API calls any time by running `bundle exec rake bittrex:console` and inputting your method.
+
+If you want to test private API calls, you will need to create `config/application.yml` and add your Bittrex keys to it (`config/application.yml.example` provides a template for this).
+
+Once you've added the API keys, run `bundle exec rake bittrex:console`
 
 ## Contributing
 
