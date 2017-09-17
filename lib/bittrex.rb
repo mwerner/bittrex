@@ -10,7 +10,7 @@ module Bittrex
   autoload :Quote,         'bittrex/quote'
   autoload :Summary,       'bittrex/summary'
   autoload :Wallet,        'bittrex/wallet'
-  autoload :Withdrawl,     'bittrex/withdrawl'
+  autoload :Withdrawal,    'bittrex/withdrawal'
 
   def self.client
     @client ||= Client.new(configuration.auth)
