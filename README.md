@@ -1,6 +1,7 @@
 # Bittrex
 
 Unofficial gem for the Bittrex API
+Tested with Ruby MRI 2.3.3 and 2.4.1
 
 ## Installation
 
