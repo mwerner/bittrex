@@ -9,7 +9,7 @@ module Bittrex
       @quantity = attrs['Amount']
       @currency = attrs['Currency']
       @confirmations = attrs['Confirmations']
-      @executed_at = Time.parse(attrs['LastUpdated'])
+      @executed_at = Bittrex::extract_timestamp(attrs['LastUpdated'])
     end
 
     def self.all

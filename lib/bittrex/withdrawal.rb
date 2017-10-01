@@ -15,7 +15,7 @@ module Bittrex
       @invalid_address = attrs['Canceled']
       @transaction_cost = attrs['TxCost']
       @transaction_id = attrs['TxId']
-      @executed_at = Time.parse(attrs['Opened'])
+      @executed_at = Bittrex::extract_timestamp(attrs['Opened'])
     end
 
     def self.all

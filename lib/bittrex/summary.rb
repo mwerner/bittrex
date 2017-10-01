@@ -13,7 +13,7 @@ module Bittrex
       @last        = attrs['Last']
       @base_volume = attrs['BaseVolume']
       @raw         = attrs
-      @created_at  = Time.parse(attrs['TimeStamp'])
+      @created_at  = Bittrex::extract_timestamp(attrs['TimeStamp'])
     end
 
     def self.all

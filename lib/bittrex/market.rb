@@ -12,7 +12,7 @@ module Bittrex
       @base_name = attrs['BaseCurrencyLong']
       @minimum_trade = attrs['MinTradeSize']
       @active = attrs['IsActive']
-      @created_at = Time.parse(attrs['Created'])
+      @created_at = Bittrex::extract_timestamp(attrs['Created'])
       @raw = attrs
     end
 

@@ -12,6 +12,11 @@ module Bittrex
   autoload :Wallet,        'bittrex/wallet'
   autoload :Withdrawal,    'bittrex/withdrawal'
 
+  def self.extract_timestamp value
+    return if value.nil? or value.strip.empty?
+    Time.parse value
+  end
+
   def self.client
     @client ||= Client.new(configuration.auth)
   end
