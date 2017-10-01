@@ -16,7 +16,7 @@ module Bittrex
       @limit = attrs['Limit']
       @commission = attrs['Commission']
       @raw = attrs
-      @executed_at = Time.parse(attrs['TimeStamp'])
+      @executed_at = attrs['TimeStamp'] ? Time.parse(attrs['TimeStamp']) : nil
     end
 
     def self.book(market, type, depth = 50)
