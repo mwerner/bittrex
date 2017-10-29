@@ -1,5 +1,7 @@
 module Bittrex
   class Deposit
+    include Helpers
+
     attr_reader :id, :transaction_id, :address, :quantity, :currency, :confirmations, :executed_at
 
     def initialize(attrs = {})
@@ -9,7 +11,7 @@ module Bittrex
       @quantity = attrs['Amount']
       @currency = attrs['Currency']
       @confirmations = attrs['Confirmations']
-      @executed_at = Bittrex::extract_timestamp(attrs['LastUpdated'])
+      @executed_at = extract_timestamp(attrs['LastUpdated'])
     end
 
     def self.all

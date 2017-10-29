@@ -1,6 +1,7 @@
 require "bittrex/version"
 
 module Bittrex
+  autoload :Helpers,       'bittrex/helpers'
   autoload :Market,        'bittrex/market'
   autoload :Client,        'bittrex/client'
   autoload :Configuration, 'bittrex/configuration'
@@ -11,11 +12,6 @@ module Bittrex
   autoload :Summary,       'bittrex/summary'
   autoload :Wallet,        'bittrex/wallet'
   autoload :Withdrawal,    'bittrex/withdrawal'
-
-  def self.extract_timestamp value
-    return if value.nil? or value.strip.empty?
-    Time.parse value
-  end
 
   def self.client
     @client ||= Client.new(configuration.auth)
