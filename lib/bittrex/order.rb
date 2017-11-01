@@ -1,7 +1,9 @@
 module Bittrex
   class Order
-    attr_reader :type, :id, :limit,
-                :exchange, :price, :quantity, :remaining,
+    include Helpers
+
+    attr_reader :type, :id, :limit, :opened_at, :closed_at,
+                :exchange, :price, :quantity, :remaining, :commission,
                 :total, :fill, :executed_at, :raw
 
     def initialize(attrs = {})
@@ -14,9 +16,11 @@ module Bittrex
       @total = attrs['Total']
       @fill = attrs['FillType']
       @limit = attrs['Limit']
-      @commission = attrs['Commission']
+      @commission = (attrs['Commission'] || attrs['CommissionPaid']).to_f
       @raw = attrs
-      @executed_at = Time.parse(attrs['TimeStamp'])
+      @opened_at = extract_timestamp(attrs['Opened'])
+      @executed_at = extract_timestamp(attrs['TimeStamp'])
+      @closed_at = extract_timestamp(attrs['Closed'])
     end
 
     def self.book(market, type, depth = 50)

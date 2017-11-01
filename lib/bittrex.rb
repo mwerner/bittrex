@@ -1,6 +1,7 @@
 require "bittrex/version"
 
 module Bittrex
+  autoload :Helpers,       'bittrex/helpers'
   autoload :Market,        'bittrex/market'
   autoload :Client,        'bittrex/client'
   autoload :Configuration, 'bittrex/configuration'
