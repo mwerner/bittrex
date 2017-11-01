@@ -2,8 +2,6 @@ require 'time'
 
 module Bittrex
   class Market
-    include Helpers
-
     attr_reader :name, :currency, :base, :currency_name, :base_name, :minimum_trade, :active, :created_at, :raw
 
     def initialize(attrs = {})
@@ -14,7 +12,7 @@ module Bittrex
       @base_name = attrs['BaseCurrencyLong']
       @minimum_trade = attrs['MinTradeSize']
       @active = attrs['IsActive']
-      @created_at = extract_timestamp(attrs['Created'])
+      @created_at = Time.parse(attrs['Created'])
       @raw = attrs
     end
 

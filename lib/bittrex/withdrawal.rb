@@ -1,7 +1,5 @@
 module Bittrex
   class Withdrawal
-    include Helpers
-
     attr_reader :id, :currency, :quantity, :address, :authorized,
                 :pending, :canceled, :invalid_address,
                 :transaction_cost, :transaction_id, :executed_at
@@ -17,7 +15,7 @@ module Bittrex
       @invalid_address = attrs['Canceled']
       @transaction_cost = attrs['TxCost']
       @transaction_id = attrs['TxId']
-      @executed_at = extract_timestamp(attrs['Opened'])
+      @executed_at = Time.parse(attrs['Opened'])
     end
 
     def self.all

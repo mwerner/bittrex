@@ -1,7 +1,5 @@
 module Bittrex
   class Summary
-    include Helpers
-
     attr_reader :name, :high, :low, :volume, :last, :base_volume, :raw, :created_at
 
     alias_method :vol, :volume
@@ -15,7 +13,7 @@ module Bittrex
       @last        = attrs['Last']
       @base_volume = attrs['BaseVolume']
       @raw         = attrs
-      @created_at  = extract_timestamp(attrs['TimeStamp'])
+      @created_at  = Time.parse(attrs['TimeStamp'])
     end
 
     def self.all

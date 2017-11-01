@@ -4,7 +4,6 @@ module Bittrex
 
     def initialize(market, attrs = {})
       @market = market
-      return if attrs.nil?
       @bid = attrs['Bid']
       @ask = attrs['Ask']
       @last = attrs['Last']
