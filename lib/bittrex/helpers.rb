@@ -1,3 +1,5 @@
+require 'time'
+
 module Bittrex
   module Helpers
     def extract_timestamp(value)
