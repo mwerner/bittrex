@@ -11,6 +11,6 @@ describe Bittrex::Deposit do
     it { should_assign_attribute(subject, :address, '17m3mcA3wo5kk637TgEysxxx2c89SDCRZDB') }
     it { should_assign_attribute(subject, :transaction_id, '416ba84218c178e7befbe22b23bf1123a23ec2bc68678586a27cebdxxxb6') }
     it { should_assign_attribute(subject, :confirmations, 2) }
-    it { should_assign_attribute(subject, :executed_at, Time.parse('2014-06-16T22:57:17.457')) }
+    it { should_assign_attribute(subject, :executed_at, DateTime.parse('2014-06-16T22:57:17.457')) }
   end
 end

@@ -16,7 +16,7 @@ describe Bittrex::Summary do
     it { should_assign_attribute(subject, :open_buy_orders, 7) }
     it { should_assign_attribute(subject, :open_sell_orders, 8) }
     it { should_assign_attribute(subject, :previous_day, 2.2e-07) }
-    it { should_assign_attribute(subject, :updated_at, Time.parse('2014-06-26T05:22:57.673')) }
-    it { should_assign_attribute(subject, :created_at, Time.parse('2014-03-01T21:00:00.000')) }
+    it { should_assign_attribute(subject, :updated_at, DateTime.parse('2014-06-26T05:22:57.673')) }
+    it { should_assign_attribute(subject, :created_at, DateTime.parse('2014-03-01T21:00:00.000')) }
   end
 end
