@@ -15,6 +15,6 @@ describe Bittrex::Withdrawal do
     it { should_assign_attribute(subject, :invalid_address, false) }
     it { should_assign_attribute(subject, :transaction_cost, 0.0002) }
     it { should_assign_attribute(subject, :transaction_id, '0b34fc4xxx102d0f80efddafexxx6b77c6ce170100b2a579ab5b5f493a383392') }
-    it { should_assign_attribute(subject, :executed_at, Time.parse('2014-06-26T05:37:55.083')) }
+    it { should_assign_attribute(subject, :executed_at, DateTime.parse('2014-06-26T05:37:55.083')) }
   end
 end

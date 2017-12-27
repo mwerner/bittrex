@@ -17,7 +17,7 @@ describe Bittrex::Order do
       it { should_assign_attribute(subject, :price, 0.0) }
       it { should_assign_attribute(subject, :total, nil) }
       it { should_assign_attribute(subject, :fill, nil) }
-      it { should_assign_attribute(subject, :executed_at, Time.parse('2014-06-21T04:08:08.75')) }
+      it { should_assign_attribute(subject, :executed_at, DateTime.parse('2014-06-21T04:08:08.75')) }
       it { should_assign_attribute(subject, :opened_at, nil) }
       it { should_assign_attribute(subject, :closed_at, nil) }
     end
@@ -38,8 +38,8 @@ describe Bittrex::Order do
       it { should_assign_attribute(subject, :total, nil) }
       it { should_assign_attribute(subject, :fill, nil) }
       it { should_assign_attribute(subject, :executed_at, nil) }
-      it { should_assign_attribute(subject, :opened_at, Time.parse('2014-06-21T04:08:08.75')) }
-      it { should_assign_attribute(subject, :closed_at, Time.parse('2014-06-22T04:08:08.75')) }
+      it { should_assign_attribute(subject, :opened_at, DateTime.parse('2014-06-21T04:08:08.75')) }
+      it { should_assign_attribute(subject, :closed_at, DateTime.parse('2014-06-22T04:08:08.75')) }
     end
   end
 end

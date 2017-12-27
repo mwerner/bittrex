@@ -3,6 +3,7 @@ module Bittrex
     include Helpers
 
     attr_reader :id, :transaction_id, :address, :quantity, :currency, :confirmations, :executed_at
+    attr_reader :raw
 
     def initialize(attrs = {})
       @id = attrs['Id']
@@ -12,6 +13,7 @@ module Bittrex
       @currency = attrs['Currency']
       @confirmations = attrs['Confirmations']
       @executed_at = extract_timestamp(attrs['LastUpdated'])
+      @raw = attrs
     end
 
     def self.all
