@@ -12,6 +12,8 @@ module Bittrex
   autoload :Summary,       'bittrex/summary'
   autoload :Wallet,        'bittrex/wallet'
   autoload :Withdrawal,    'bittrex/withdrawal'
+  autoload :Transaction,    'bittrex/transaction'
+
 
   def self.client
     @client ||= Client.new(configuration.auth)
