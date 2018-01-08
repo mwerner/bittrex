@@ -4,7 +4,7 @@ require 'json'
 
 module Bittrex
   class Client
-    HOST = 'https://bittrex.com/api/v1.1'
+    HOST = 'https://bittrex.com/api/v2.0'
     # https://bittrex.com/api/v2.0/key/balance/getbalances
 
     attr_reader :key, :secret
