@@ -4,7 +4,7 @@ module Bittrex
 
     attr_reader :id, :currency, :quantity, :address, :authorized,
                 :pending, :canceled, :invalid_address,
-                :transaction_cost, :transaction_id, :executed_at
+                :transaction_cost, :transaction_id, :executed_at, :raw
 
     def initialize(attrs = {})
       @id = attrs['PaymentUuid']
@@ -18,6 +18,7 @@ module Bittrex
       @transaction_cost = attrs['TxCost']
       @transaction_id = attrs['TxId']
       @executed_at = extract_timestamp(attrs['Opened'])
+      @raw = attrs
     end
 
     def self.all
